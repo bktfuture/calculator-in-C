@@ -1,13 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-
-
-int main()
-{
+void calculator(){
     char operator;
     double first;
     double second;
-    printf("\nHello! This is simple calculator! <3 ");
+    double result;
     printf("\nPlease choose an operator (+, -, *, /): ");
     scanf("%c", &operator);
     printf("\nEnter your first operand: ");
@@ -18,22 +15,28 @@ int main()
     switch (operator)
     {
     case '+':
-        printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+        result = first + second;
         break;
     case '-':
-        printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+        result = first - second;
         break;
     case '*':
-        printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+       result = first * second;
         break;
     case '/':
-        printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+  result = first / second;
         break;
     default:
         printf("Please enter viable operator!");
         break;
     }
+    printf("\nResult: %.2lf", result);
+}
 
+int main(){
+    printf("\nHello! This is simple calculator! <3 ");
+    calculator();
  
     return 0;
 }
+    
