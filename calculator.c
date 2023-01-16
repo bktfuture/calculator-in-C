@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-void calculator(){
-    char operator;
-    double first;
-    double second;
-    double result;
+void calculator(char operator, double first, double second, double result){
+
     printf("\nPlease choose an operator (+, -, *, /): ");
     scanf("%c", &operator);
     printf("\nEnter your first operand: ");
@@ -34,8 +31,12 @@ void calculator(){
 }
 
 int main(){
+    char operator;
+    double first;
+    double second;
+    double result;
     printf("\nHello! This is simple calculator! <3 ");
-    calculator();
+    calculator(operator, first, second, result);
  
     return 0;
 }
